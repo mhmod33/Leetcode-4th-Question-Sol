@@ -1,5 +1,5 @@
 var createCounter = function(init) {
-    let Init=init
+    const Init=init
     return{
         increment(){
             init++
@@ -15,3 +15,12 @@ var createCounter = function(init) {
     }
 };
 
+// Another Solutions
+var createCounter =function (init){
+    let Init=init;
+    return{
+        increment : ()=>{ init++; return init},
+        reset : ()=>{ return init=Init;},
+        decrement  :()=>{ init--; return init}
+    }
+}
